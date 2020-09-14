@@ -55,6 +55,7 @@ func (h *coasterHandlers) getRandomCoaster(w http.ResponseWriter, r *http.Reques
 	}
 
 	defer h.Unlock()
+	
  	var target string
 	if len(ids) == 0 {
 		w.WriteHeader(http.StatusNotFound)
